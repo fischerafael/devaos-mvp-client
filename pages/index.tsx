@@ -2,6 +2,7 @@ import Logo from '../src/external/ui/components/display/Logo'
 import Button from '../src/external/ui/components/input/Button'
 import FlexContainer from '../src/external/ui/components/layout/FlexContainer'
 import CustomLink from '../src/external/ui/components/navigation/CustomLink'
+import NavBar from '../src/external/ui/components/templates/NavBar'
 
 export default function Home() {
     return (
@@ -11,22 +12,12 @@ export default function Home() {
             column
             style={{ margin: '0 1rem' }}
         >
-            <FlexContainer
-                flex="alignCenterJustifySpaceBetween"
-                style={{
-                    width: '100%',
-                    height: '15vh'
-                }}
-                as="header"
-            >
-                <CustomLink href="/">
-                    <Logo />
-                </CustomLink>
-
+            <NavBar>
                 <CustomLink href="/login">
                     <Button variant="outline">ENTRAR</Button>
                 </CustomLink>
-            </FlexContainer>
+            </NavBar>
+
             <FlexContainer
                 as="section"
                 style={{
