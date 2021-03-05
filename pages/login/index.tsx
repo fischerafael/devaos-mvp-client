@@ -5,7 +5,6 @@ import FlexContainer from '../../src/external/ui/components/layout/FlexContainer
 import CustomLink from '../../src/external/ui/components/navigation/CustomLink'
 
 const Register = () => {
-    const [github, setGithub] = useState('')
     const [password, setPassword] = useState('')
     const [email, setEmail] = useState('')
 
@@ -30,7 +29,7 @@ const Register = () => {
                 }}
             >
                 <h1 style={{ fontSize: '1.5rem', textAlign: 'center' }}>
-                    CADASTRE-SE
+                    ENTRE
                 </h1>
                 <p
                     style={{
@@ -39,22 +38,13 @@ const Register = () => {
                         margin: '0.5rem 0'
                     }}
                 >
-                    Utilize seu Github
+                    Acesse a sua conta
                 </p>
                 <FlexContainer
                     as="form"
                     column
                     style={{ background: 'transparent', width: '100%' }}
                 >
-                    <Input
-                        name="Github"
-                        value={github}
-                        onChange={(e) => setGithub(e.target.value)}
-                        error={''}
-                        style={{ margin: '.25rem 0' }}
-                    >
-                        +
-                    </Input>
                     <Input
                         name="Email"
                         value={email}
@@ -74,7 +64,7 @@ const Register = () => {
                     >
                         +
                     </Input>
-                    <Button style={{ marginTop: '1rem' }}>Cadastrar</Button>
+                    <Button style={{ marginTop: '1rem' }}>Entrar</Button>
                 </FlexContainer>
                 <CustomLink href="/">voltar</CustomLink>
             </FlexContainer>

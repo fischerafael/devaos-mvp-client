@@ -12,7 +12,7 @@ export interface PropsTheme {
 export const theme = {
     colors: {
         background: '#F3F6F8',
-        text: '#283E4A',
+        text: '#333',
         primary: '#0073B1',
         ligth: '#fff'
     }

@@ -1,6 +1,7 @@
 import Logo from '../src/external/ui/components/display/Logo'
 import Button from '../src/external/ui/components/input/Button'
 import FlexContainer from '../src/external/ui/components/layout/FlexContainer'
+import CustomLink from '../src/external/ui/components/navigation/CustomLink'
 
 export default function Home() {
     return (
@@ -18,8 +19,13 @@ export default function Home() {
                 }}
                 as="header"
             >
-                <Logo />
-                <Button variant="outline">ENTRAR</Button>
+                <CustomLink href="/">
+                    <Logo />
+                </CustomLink>
+
+                <CustomLink href="/login">
+                    <Button variant="outline">ENTRAR</Button>
+                </CustomLink>
             </FlexContainer>
             <FlexContainer
                 as="section"
@@ -50,7 +56,9 @@ export default function Home() {
                     MOSTRE SUA EXPERIÊNCIA COMO DESENVOLVEDOR COMPARTILHANDO
                     CONHECIMENTO
                 </h2>
-                <Button style={{ margin: '2rem' }}>CADASTRAR</Button>
+                <CustomLink href="/register">
+                    <Button style={{ margin: '2rem' }}>CADASTRAR</Button>
+                </CustomLink>
             </FlexContainer>
         </FlexContainer>
     )
